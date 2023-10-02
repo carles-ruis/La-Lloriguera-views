@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:orientation="vertical"
+    android:id="@+id/task_form_view"
+    tools:parentTag="androidx.appcompat.widget.LinearLayoutCompat"
+    tools:showIn="@layout/fragment_new_task">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/task_form_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/new_task_name_label"
+        app:errorEnabled="true"
+        app:errorTextAppearance="?textAppearanceLabelMedium"
+        app:helperText="@string/new_task_name_description"
+        app:helperTextTextAppearance="?textAppearanceLabelMedium"
+        app:helperTextTextColor="?colorOutline">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/task_form_name_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?textAppearanceBodyMedium"
+            tools:text="@tools:sample/full_names" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/task_form_type_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/outline_shape"
+        android:paddingStart="14dp"
+        android:paddingEnd="2dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_task_type_label"
+            android:textAppearance="?textAppearanceBodySmall"
+            android:textColor="?colorOnSurfaceVariant" />
+
+        <RadioButton
+            android:id="@+id/task_form_periodic_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="0dp"
+            android:text="@string/new_task_periodic"
+            android:textAppearance="?textAppearanceBodyMedium"
+            tools:checked="true" />
+
+        <TextView
+            android:id="@+id/task_form_periodic_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?textAppearanceLabelMedium"
+            android:textColor="?colorOutline"
+            tools:text="La tasca es fara cada 3 dies" />
+
+        <RadioButton
+            android:id="@+id/task_form_one_time_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="0dp"
+            android:text="@string/new_task_one_time"
+            android:textAppearance="?textAppearanceBodyMedium" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/new_task_one_time_description"
+            android:textAppearance="?textAppearanceLabelMedium"
+            android:textColor="?colorOutline" />
+
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/task_one_time_date_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/new_task_next_date"
+        app:helperText="@string/new_task_next_date_description"
+        app:helperTextTextAppearance="?textAppearanceLabelMedium"
+        app:helperTextTextColor="?colorOutline">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/task_one_time_date_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textAppearance="?textAppearanceBodyMedium"
+            tools:text="@tools:sample/date/ddmmyy" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/task_form_periodicity_input"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/new_task_periodicity"
+        app:helperText="@string/new_task_periodicity_description"
+        app:helperTextTextAppearance="?textAppearanceLabelMedium"
+        app:helperTextTextColor="?colorOutline">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/task_form_periodicity_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:textAppearance="?textAppearanceBodyMedium"
+            tools:ignore="LabelFor"
+            tools:text="5" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/task_form_periodic_date_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/new_task_last_date"
+        app:helperText="@string/new_task_last_date_description"
+        app:helperTextTextAppearance="?textAppearanceLabelMedium"
+        app:helperTextTextColor="?colorOutline">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/task_form_periodic_date_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textAppearance="?textAppearanceBodyMedium"
+            tools:text="@tools:sample/date/ddmmyy" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</merge>

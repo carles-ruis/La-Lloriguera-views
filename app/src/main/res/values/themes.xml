@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.LaLlorigueraViews" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="textAppearanceHeadlineLarge">@style/Typo.HeadlineLarge</item>
+        <item name="textAppearanceHeadlineMedium">@style/Typo.HeadlineMedium</item>
+        <item name="textAppearanceHeadlineSmall">@style/Typo.HeadlineSmall</item>
+        <item name="textAppearanceBodyLarge">@style/Typo.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/Typo.BodyMedium</item>
+        <item name="textAppearanceBodySmall">@style/Typo.BodySmall</item>
+        <item name="textAppearanceLabelLarge">@style/Typo.LabelLarge</item>
+        <item name="textAppearanceLabelMedium">@style/Typo.LabelMedium</item>
+        <item name="textAppearanceLabelSmall">@style/Typo.LabelSmall</item>
+    </style>
+
+    <style name="Theme.LaLlorigueraViews" parent="Base.Theme.LaLlorigueraViews">
+        <item name="colorPrimary">@color/light_primary</item>
+        <item name="colorOnPrimary">@color/light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/light_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/light_secondary</item>
+        <item name="colorOnSecondary">@color/light_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/light_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/light_onSecondaryContainer</item>
+        <item name="colorError">@color/light_error</item>
+        <item name="colorOnError">@color/light_onError</item>
+        <item name="colorErrorContainer">@color/light_errorContainer</item>
+        <item name="colorOnErrorContainer">@color/light_onErrorContainer</item>
+        <item name="android:colorBackground">@color/light_background</item>
+        <item name="colorOnBackground">@color/light_onBackground</item>
+        <item name="colorSurface">@color/light_surface</item>
+        <item name="colorOnSurface">@color/light_onSurface</item>
+        <item name="colorSurfaceVariant">@color/light_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/light_onSurfaceVariant</item>
+        <item name="colorOutline">@color/light_outline</item>
+        <item name="colorOutlineVariant">@color/light_outlineVariant</item>
+        <item name="colorTertiaryContainer">@color/light_tertiaryContainer</item>
+    </style>
+
+</resources>

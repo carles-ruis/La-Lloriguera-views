@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">La Lloriguera</string>
+    <string name="web_client_id">768684880154-flgi8e11g5b13kfvcrl9aq2bfuubpugr.apps.googleusercontent.com</string>
+    <string name="empty_string"> </string>
+    <string name="back">Back</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel.la</string>
+    <string name="yes">Si</string>
+    <string name="retry">Torna-ho a intentar</string>
+    <string name="no_internet_connection">No tens connexio a internet</string>
+
+    <!-- signin screen -->
+    <string name="signin_title">La Lloriguera</string>
+    <string name="signin_message">Iniciant sessió…</string>
+    <string name="signin_error">Error iniciant sessió. %s</string>
+
+    <!-- tasks screen -->
+    <string name="tasks_title">La Lloriguera</string>
+    <string name="tasks_error">Error obtenint les tasques</string>
+    <string name="tasks_mark_as_done">Completa la tasca</string>
+    <string name="tasks_mark_as_done_error">Error! No he pogut actualitzar la tasca</string>
+    <string name="tasks_done">Tasca %s completada</string>
+    <string name="tasks_edit">Edita la tasca</string>
+    <string name="tasks_add">Crea una tasca</string>
+    <string name="tasks_one_time">Tasca d\'una sola vegada</string>
+    <string name="tasks_no_tasks">No tens tasques guardades!</string>
+
+    <!-- new task screen -->
+    <string name="new_task_title">Nova tasca</string>
+    <string name="new_task_error">Error! No he pogut desar la tasca. Torna-ho a intentar</string>
+    <string name="new_task_saved">Tasca %s desada</string>
+    <string name="new_task_name_label">Nom</string>
+    <string name="new_task_name_placeholder">Regar les plantes</string>
+    <string name="new_task_name_error">Has de donar-li un nom a la tasca</string>
+    <string name="new_task_name_description">Escriu el nom de la tasca</string>
+    <string name="new_task_one_time">Puntual</string>
+    <string name="new_task_type_label">Tipus de tasca</string>
+    <string name="new_task_one_time_description">La tasca es fara una sola vegada</string>
+    <string name="new_task_periodic">Periodica</string>
+    <plurals name="new_task_periodic_description">
+        <item quantity="one">La tasca es fara cada dia</item>
+        <item quantity="other">La tasca es fara cada %d dies</item>
+    </plurals>
+    <string name="new_task_periodicity">Periodicitat</string>
+    <string name="new_task_periodicity_one_time">Dies de termini</string>
+    <string name="new_task_periodicity_description">Selecciona cada quants dies faras la tasca</string>
+    <string name="new_task_periodicity_one_time_description">Selecciona d\'aqui quants dies faras la tasca</string>
+    <string name="new_task_last_date">Darrer dia</string>
+    <string name="new_task_last_date_description">Selecciona el darrer dia en que vas fer la tasca</string>
+    <string name="new_task_next_date">Data limit</string>
+    <string name="new_task_next_date_description">Selecciona la data limit per fer la tasca</string>
+    <string name="new_task_notifications">Notificacions</string>
+    <string name="new_task_notifications_description">Marca per rebre una notificacio a la data termini de la tasca</string>
+    <string name="new_task_save">Desa la tasca</string>
+
+    <!-- edit task screen -->
+    <string name="edit_task_title">Edita tasca</string>
+    <string name="edit_task_saved">Tasca %s actualitzada</string>
+    <string name="edit_task_save_error">Error! No he pogut actualitzar la tasca</string>
+    <string name="edit_task_load_error">Error! No he pogut carregar la tasca</string>
+    <string name="edit_task_deleted">Tasca %s esborrada</string>
+    <string name="edit_task_save">Actualitza la tasca</string>
+    <string name="edit_task_delete">Esborra la tasca</string>
+    <string name="edit_task_delete_confirmation">Segur que vols esborrar la tasca %s?</string>
+    <string name="edit_task_delete_error">Error! No he pogut esborrar la tasca</string>
+
+    <!-- conill screen -->
+    <string name="conill_title">La Lloriguera</string>
+    <string name="conill_text">Molt be! Tens totes les tasques al dia. Petons de conill &#x1F430;&#x2764;</string>
+    <string name="conill_text_alt">Molt be! Tens totes les tasques al dia. Petons de conill &#128048;&#10084;</string>
+    <string name="conill_image">Kissing rabbits</string>
+
+    <!-- notifications -->
+    <string name="notification_channel_delayed_tasks">Notificacions de tasques amb retard</string>
+    <string name="notification_delayed_tasks_title">Tens tasques amb retard</string>
+</resources>
