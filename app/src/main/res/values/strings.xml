@@ -61,7 +61,7 @@
     <string name="edit_task_deleted">Tasca %s esborrada</string>
     <string name="edit_task_save">Actualitza la tasca</string>
     <string name="edit_task_delete">Esborra la tasca</string>
-    <string name="edit_task_delete_confirmation">Segur que vols esborrar la tasca %s?</string>
+    <string name="edit_task_delete_confirmation">Segur que vols esborrar aquesta tasca?</string>
     <string name="edit_task_delete_error">Error! No he pogut esborrar la tasca</string>
 
     <!-- conill screen -->

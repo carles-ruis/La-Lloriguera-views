@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "768684880154",
+    "firebase_url": "https://la-lloriguera-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "la-lloriguera",
+    "storage_bucket": "la-lloriguera.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768684880154:android:84773cb5a06fed6bdf3ca3",
+        "android_client_info": {
+          "package_name": "com.carles.lalloriguera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768684880154-f2o8igek8lopuobet1nq2ivf70oqjrh4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.carles.lalloriguera",
+            "certificate_hash": "eb72d39a00c4129e16cf637ce760dd48bbf31328"
+          }
+        },
+        {
+          "client_id": "768684880154-flgi8e11g5b13kfvcrl9aq2bfuubpugr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdgytIXlNA6QhzcLCvEykTj4Zfwqq9X2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768684880154-flgi8e11g5b13kfvcrl9aq2bfuubpugr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768684880154:android:f94e3154c2670e09df3ca3",
+        "android_client_info": {
+          "package_name": "com.carles.lallorigueraviews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768684880154-flgi8e11g5b13kfvcrl9aq2bfuubpugr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdgytIXlNA6QhzcLCvEykTj4Zfwqq9X2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768684880154-flgi8e11g5b13kfvcrl9aq2bfuubpugr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
