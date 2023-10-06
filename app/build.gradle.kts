@@ -18,7 +18,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.carles.lallorigueraviews.runner.LlorigueraTestRunner"
 
         ksp { arg("room.schemaLocation", "$projectDir/schemas") }
     }
@@ -38,6 +38,13 @@ android {
     }
     buildFeatures {
         viewBinding = true
+    }
+    testOptions {
+        animationsDisabled = true
+        unitTests {
+            isReturnDefaultValues = true
+            isIncludeAndroidResources = true
+        }
     }
 }
 
@@ -69,6 +76,13 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.3")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.3")
     implementation("androidx.fragment:fragment-ktx:1.6.1")
+    testImplementation("io.mockk:mockk:1.12.3")
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.48")
+    kspAndroidTest("com.google.dagger:hilt-android-compiler:2.48")
+    androidTestImplementation("androidx.arch.core:core-testing:2.2.0")
+    androidTestImplementation("androidx.test.espresso:espresso-contrib:3.5.1")
+
 
     // Firebase
     implementation(platform("com.google.firebase:firebase-bom:32.3.1"))

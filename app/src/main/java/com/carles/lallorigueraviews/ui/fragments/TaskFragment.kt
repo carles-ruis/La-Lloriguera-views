@@ -52,7 +52,7 @@ abstract class TaskFragment<T : TaskViewModel> : Fragment() {
     }
 
     private fun initForm() {
-        form.taskFormNameEdittext.doOnTextChanged { text, _, _, _ ->
+        form.taskFormNameText.doOnTextChanged { text, _, _, _ ->
             viewModel.onNameChange(text.toString())
         }
         form.taskFormPeriodicButton.setOnClickListener { view ->
@@ -117,7 +117,7 @@ abstract class TaskFragment<T : TaskViewModel> : Fragment() {
     }
 
     protected fun fillForm(task: Tasc) {
-        form.taskFormNameEdittext.setText(task.name)
+        form.taskFormNameText.setText(task.name)
         form.taskFormOneTimeButton.isChecked = task.isOneTime
         form.taskFormPeriodicButton.isChecked = task.isOneTime.not()
 

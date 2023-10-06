@@ -5,7 +5,9 @@ import androidx.annotation.StringRes
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.carles.lallorigueraviews.R
 import com.carles.lallorigueraviews.common.TimeHelper
+import com.carles.lallorigueraviews.data.remote.NoConnectionException
 import com.carles.lallorigueraviews.model.Tasc
 import com.carles.lallorigueraviews.ui.common.LiveEvent
 import com.carles.lallorigueraviews.ui.common.addTo
@@ -75,21 +77,21 @@ abstract class TaskViewModel : ViewModel() {
     private fun onOneTimeTaskChange(isOneTime: Boolean) {
         task = task.copy(
             isOneTime = isOneTime,
-            lastDate = System.currentTimeMillis(),
+            lastDate = TimeHelper.now(),
             periodicity = DEFAULT_PERIODICITY
         )
         updateForm()
     }
 
     fun onLastDateChange(lastDate: Long) {
-        require(task.isOneTime.not()) { "Cannot change last date on a one time task" }
+        check(task.isOneTime.not()) { "Cannot change last date on a one time task" }
         task = task.copy(lastDate = lastDate)
         updateForm()
     }
 
     fun onNextDateChange(nextDate: Long) {
-        require(task.isOneTime) { "Cannot change next date on a periodic task" }
-        val now = System.currentTimeMillis()
+        check(task.isOneTime) { "Cannot change next date on a periodic task" }
+        val now = TimeHelper.now()
         val daysRemaining = TimeHelper.getDaysBetweenDates(now, nextDate)
         task = task.copy(lastDate = now, periodicity = daysRemaining)
         updateForm()
@@ -99,10 +101,9 @@ abstract class TaskViewModel : ViewModel() {
         task = task.copy(periodicity = periodicity)
     }
 
-
     fun onOneTimeDateClick() {
         val nextDate = DateTime(task.nextDate)
-        val now = System.currentTimeMillis()
+        val now = TimeHelper.now()
         _event.value = TaskFormEvent.NavigateToCalendar(
             year = nextDate.year,
             month = nextDate.monthOfYear,
@@ -115,7 +116,7 @@ abstract class TaskViewModel : ViewModel() {
 
     fun onPeriodicDateClick() {
         val lastDate = DateTime(task.lastDate)
-        val now = System.currentTimeMillis()
+        val now = TimeHelper.now()
         _event.value = TaskFormEvent.NavigateToCalendar(
             year = lastDate.year,
             month = lastDate.monthOfYear,
@@ -136,23 +137,15 @@ abstract class TaskViewModel : ViewModel() {
             }, { exception ->
                 Log.w("TaskViewModel", exception.localizedMessage ?: "onSaveClick error")
                 _state.value = TaskFormState.Filling(task)
-                _event.value = TaskFormEvent.ShowError(errorMessage)
+                _event.value =
+                    TaskFormEvent.ShowError(if (exception is NoConnectionException) R.string.no_internet_connection else errorMessage)
             }).addTo(disposables)
         }
 
     }
 
     companion object {
-        private const val DEFAULT_PERIODICITY = 7
-
         @JvmStatic
-        protected val NEW_TASK = Tasc(
-            id = null,
-            name = "",
-            isOneTime = false,
-            lastDate = System.currentTimeMillis(),
-            periodicity = DEFAULT_PERIODICITY,
-            notificationsOn = false
-        )
+        protected val DEFAULT_PERIODICITY = 7
     }
 }

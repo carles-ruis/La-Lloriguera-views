@@ -33,7 +33,7 @@
             tools:visibility="visible" />
 
         <TextView
-            android:id="@+id/task_name_textview"
+            android:id="@+id/task_name_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ellipsize="end"

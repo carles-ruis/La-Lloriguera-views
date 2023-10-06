@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.carles.lallorigueraviews.R
+import com.carles.lallorigueraviews.data.remote.NoConnectionException
 import com.carles.lallorigueraviews.domain.GetTasks
 import com.carles.lallorigueraviews.domain.MarkTaskAsDone
 import com.carles.lallorigueraviews.model.Tasc
@@ -54,7 +55,8 @@ class TasksViewModel @Inject constructor(
             _state.value = TasksState.Data(tasks)
         }, { exception ->
             Log.w("TasksViewModel", exception.localizedMessage ?: "getTasks error")
-            _state.value = TasksState.Error(R.string.tasks_error)
+            _state.value =
+                TasksState.Error(if (exception is NoConnectionException) R.string.no_internet_connection else R.string.tasks_error)
         }).addTo(disposables)
     }
 
@@ -72,7 +74,8 @@ class TasksViewModel @Inject constructor(
             _event.value = TasksEvent.TaskDone(task.name)
         }, { exception ->
             Log.w("TasksViewModel", exception.localizedMessage ?: "onTaskDone error")
-            _event.value = TasksEvent.ShowError(R.string.tasks_mark_as_done_error)
+            _event.value =
+                TasksEvent.ShowError(if (exception is NoConnectionException) R.string.no_internet_connection else R.string.tasks_mark_as_done_error)
         }).addTo(disposables)
     }
 

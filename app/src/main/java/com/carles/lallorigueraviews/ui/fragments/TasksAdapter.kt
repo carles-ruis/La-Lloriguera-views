@@ -42,7 +42,7 @@ class TasksAdapter(
             binding.taskCard.setCardBackgroundColor(
                 if (task.daysRemaining < 0) delayedTaskColor else Color.TRANSPARENT
             )
-            binding.taskNameTextview.text = task.name
+            binding.taskNameText.text = task.name
             binding.taskDaysRemainingText.text = task.daysRemaining.absoluteValue.toString()
             binding.taskOneTimeText.isVisible = task.isOneTime
         }

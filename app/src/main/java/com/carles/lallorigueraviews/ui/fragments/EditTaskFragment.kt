@@ -69,4 +69,3 @@ class EditTaskFragment : TaskFragment<EditTaskViewModel>() {
             .show()
     }
 }
-

@@ -27,5 +27,7 @@ class TimeHelper {
                 LocalDate(currentTime).toDateTimeAtStartOfDay().plusDays(1).plusHours(hours)
             ).minutes
         }
+
+        fun now() = System.currentTimeMillis()
     }
 }

@@ -1,5 +1,6 @@
 package com.carles.lallorigueraviews.data.local
 
+import android.util.Log
 import com.carles.lallorigueraviews.data.TaskDatasource
 import com.carles.lallorigueraviews.data.TaskMapper
 import com.carles.lallorigueraviews.model.Tasc
